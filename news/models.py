@@ -14,9 +14,10 @@ python manage.py migrate
 на сайте
 """
 
+
 class Articles(models.Model):
-    title = models.CharField('Name', max_length=50,)
-    intro = models.CharField('Introduction', max_length=250,)
+    title = models.CharField('Name', max_length=50, )
+    intro = models.CharField('Introduction', max_length=250, )
     text_content = models.TextField('Actual')
     date = models.DateTimeField('Publication date')
 

@@ -10,7 +10,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('hello.urls')), #при переходе на страницу ""(главная)
+    path('', include('hello.urls')),  # при переходе на страницу ""(главная)
     # отсылает к юрлс из приложения хелло
     path('news/', include('news.urls'))
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

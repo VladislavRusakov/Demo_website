@@ -3,6 +3,7 @@ from .models import Articles
 from .forms import ArticlesForm
 from django.views.generic import DetailView, UpdateView, DeleteView
 
+
 # Импортируем таблицу из моделей
 def news_home(request):
     #  Получаем все объекты из таблицы в переменную news
@@ -29,7 +30,6 @@ class NewsDeleteView(DeleteView):
     success_url = '/news'
 
 
-
 def create(request):
     error = ''
     if request.method == 'POST':
@@ -42,6 +42,6 @@ def create(request):
     form = ArticlesForm()
     data = {
         'form': form,
-        'error':error,
+        'error': error,
     }
     return render(request, 'news/create.html', data)
