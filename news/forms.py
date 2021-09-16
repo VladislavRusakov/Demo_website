@@ -25,3 +25,5 @@ class ArticlesForm(ModelForm):
                 'placeholder': "Date"
             }),
         }
+        
+        fields = '__all__'
